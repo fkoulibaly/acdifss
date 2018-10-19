@@ -1,0 +1,13 @@
+budget:
+    resource: "@BudgetBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+projet:
+    resource: "@ProjetBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+sapp:
+    resource: '@AppBundle/Controller/'
+    type: annotation
