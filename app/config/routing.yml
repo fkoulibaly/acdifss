@@ -1,3 +1,51 @@
+projet_agence_financement:
+    resource: "@ProjetBundle/Controller/AgenceFinancementController.php"
+    type:     annotation
+
+projet_district:
+    resource: "@ProjetBundle/Controller/DistrictController.php"
+    type:     annotation
+
+projet_institution:
+    resource: "@ProjetBundle/Controller/InstitutionController.php"
+    type:     annotation
+
+projet_intervention:
+    resource: "@ProjetBundle/Controller/InterventionController.php"
+    type:     annotation
+
+projet_objectif_specifique:
+    resource: "@ProjetBundle/Controller/ObjectifSpecifiqueController.php"
+    type:     annotation
+
+projet_projet:
+    resource: "@ProjetBundle/Controller/ProjetController.php"
+    type:     annotation
+
+projet_projet_agence_financement:
+    resource: "@ProjetBundle/Controller/ProjetAgenceFinancementController.php"
+    type:     annotation
+
+projet_projet_bailleur:
+    resource: "@ProjetBundle/Controller/ProjetBailleurController.php"
+    type:     annotation
+
+projet_projet_institution:
+    resource: "@ProjetBundle/Controller/ProjetInstitutionController.php"
+    type:     annotation
+
+projet_region:
+    resource: "@ProjetBundle/Controller/RegionController.php"
+    type:     annotation
+
+projet_resultat:
+    resource: "@ProjetBundle/Controller/ResultatController.php"
+    type:     annotation
+
+projet_bailleur:
+    resource: "@ProjetBundle/Controller/BailleurController.php"
+    type:     annotation
+
 budget:
     resource: "@BudgetBundle/Controller/"
     type:     annotation
