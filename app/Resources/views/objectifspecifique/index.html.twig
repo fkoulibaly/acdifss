@@ -1,0 +1,39 @@
+{% extends '@Projet/app.html.twig' %}
+
+{% block body %}
+    <h1>Objectifspecifiques list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Libelle</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for objectifSpecifique in objectifSpecifiques %}
+            <tr>
+                <td><a href="{{ path('objectifspecifique_show', { 'id': objectifSpecifique.id }) }}">{{ objectifSpecifique.id }}</a></td>
+                <td>{{ objectifSpecifique.libelle }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('objectifspecifique_show', { 'id': objectifSpecifique.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('objectifspecifique_edit', { 'id': objectifSpecifique.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('objectifspecifique_new') }}">Create a new objectifSpecifique</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends '@Projet/app.html.twig' %}
+
+{% block body %}
+    <h1>Projetinstitutions list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nompointfocal</th>
+                <th>Adressepointfocal</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for projetInstitution in projetInstitutions %}
+            <tr>
+                <td><a href="{{ path('projetinstitution_show', { 'id': projetInstitution.id }) }}">{{ projetInstitution.id }}</a></td>
+                <td>{{ projetInstitution.nomPointFocal }}</td>
+                <td>{{ projetInstitution.adressePointFocal }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('projetinstitution_show', { 'id': projetInstitution.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('projetinstitution_edit', { 'id': projetInstitution.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('projetinstitution_new') }}">Create a new projetInstitution</a>
+        </li>
+    </ul>
+{% endblock %}

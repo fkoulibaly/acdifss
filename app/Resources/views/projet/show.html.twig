@@ -1,0 +1,92 @@
+{% extends '@Projet/app.html.twig' %}
+
+{% block body %}
+    <h1>Projet</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ projet.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ projet.titre }}</td>
+            </tr>
+            <tr>
+                <th>Debut</th>
+                <td>{% if projet.debut %}{{ projet.debut|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Fin</th>
+                <td>{% if projet.fin %}{{ projet.fin|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Devisefinancement</th>
+                <td>{{ projet.deviseFinancement }}</td>
+            </tr>
+            <tr>
+                <th>Montanttotal</th>
+                <td>{{ projet.montantTotal }}</td>
+            </tr>
+            <tr>
+                <th>Contributionmonetaireetatgnf</th>
+                <td>{{ projet.contributionMonetaireEtatGnf }}</td>
+            </tr>
+            <tr>
+                <th>Contributionmonetaireetatusd</th>
+                <td>{{ projet.contributionMonetaireEtatUsd }}</td>
+            </tr>
+            <tr>
+                <th>Contributionpnds</th>
+                <td>{% if projet.contributionPnds %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Contributionptss</th>
+                <td>{% if projet.contributionPtss %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Contributiondipnds</th>
+                <td>{% if projet.contributionDiPnds %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Objectifgeneral</th>
+                <td>{{ projet.objectifGeneral }}</td>
+            </tr>
+            <tr>
+                <th>Leadershipgouvernancesanitaire</th>
+                <td>{% if projet.leadershipGouvernanceSanitaire %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Financementrhsqualite</th>
+                <td>{% if projet.financementRhsQualite %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Prestationsservices</th>
+                <td>{% if projet.prestationsServices %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Produitsseit</th>
+                <td>{% if projet.produitSsEit %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Sisrsante</th>
+                <td>{% if projet.sisrSante %}Yes{% else %}No{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('projet_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('projet_edit', { 'id': projet.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

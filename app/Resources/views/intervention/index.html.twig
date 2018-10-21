@@ -1,0 +1,45 @@
+{% extends '@Projet/app.html.twig' %}
+
+{% block body %}
+    <h1>Interventions list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Debut</th>
+                <th>Fin</th>
+                <th>Objectif</th>
+                <th>Resultat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for intervention in interventions %}
+            <tr>
+                <td><a href="{{ path('intervention_show', { 'id': intervention.id }) }}">{{ intervention.id }}</a></td>
+                <td>{% if intervention.debut %}{{ intervention.debut|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if intervention.fin %}{{ intervention.fin|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ intervention.objectif }}</td>
+                <td>{{ intervention.resultat }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('intervention_show', { 'id': intervention.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('intervention_edit', { 'id': intervention.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('intervention_new') }}">Create a new intervention</a>
+        </li>
+    </ul>
+{% endblock %}

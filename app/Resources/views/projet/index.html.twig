@@ -1,0 +1,69 @@
+{% extends '@Projet/app.html.twig' %}
+
+{% block body %}
+    <h1>Projets list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Debut</th>
+                <th>Fin</th>
+                <th>Devisefinancement</th>
+                <th>Montanttotal</th>
+                <th>Contributionmonetaireetatgnf</th>
+                <th>Contributionmonetaireetatusd</th>
+                <th>Contributionpnds</th>
+                <th>Contributionptss</th>
+                <th>Contributiondipnds</th>
+                <th>Objectifgeneral</th>
+                <th>Leadershipgouvernancesanitaire</th>
+                <th>Financementrhsqualite</th>
+                <th>Prestationsservices</th>
+                <th>Produitsseit</th>
+                <th>Sisrsante</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for projet in projets %}
+            <tr>
+                <td><a href="{{ path('projet_show', { 'id': projet.id }) }}">{{ projet.id }}</a></td>
+                <td>{{ projet.titre }}</td>
+                <td>{% if projet.debut %}{{ projet.debut|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if projet.fin %}{{ projet.fin|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ projet.deviseFinancement }}</td>
+                <td>{{ projet.montantTotal }}</td>
+                <td>{{ projet.contributionMonetaireEtatGnf }}</td>
+                <td>{{ projet.contributionMonetaireEtatUsd }}</td>
+                <td>{% if projet.contributionPnds %}Yes{% else %}No{% endif %}</td>
+                <td>{% if projet.contributionPtss %}Yes{% else %}No{% endif %}</td>
+                <td>{% if projet.contributionDiPnds %}Yes{% else %}No{% endif %}</td>
+                <td>{{ projet.objectifGeneral }}</td>
+                <td>{% if projet.leadershipGouvernanceSanitaire %}Yes{% else %}No{% endif %}</td>
+                <td>{% if projet.financementRhsQualite %}Yes{% else %}No{% endif %}</td>
+                <td>{% if projet.prestationsServices %}Yes{% else %}No{% endif %}</td>
+                <td>{% if projet.produitSsEit %}Yes{% else %}No{% endif %}</td>
+                <td>{% if projet.sisrSante %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('projet_show', { 'id': projet.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('projet_edit', { 'id': projet.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('projet_new') }}">Create a new projet</a>
+        </li>
+    </ul>
+{% endblock %}

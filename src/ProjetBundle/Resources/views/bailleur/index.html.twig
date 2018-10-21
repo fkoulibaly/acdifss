@@ -1,0 +1,41 @@
+{% extends '@Projet/app.html.twig' %}
+
+{% block body %}
+    <h1>Bailleurs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Sigle</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bailleur in bailleurs %}
+            <tr>
+                <td><a href="{{ path('bailleur_show', { 'id': bailleur.id }) }}">{{ bailleur.id }}</a></td>
+                <td>{{ bailleur.nom }}</td>
+                <td>{{ bailleur.sigle }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('bailleur_show', { 'id': bailleur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('bailleur_edit', { 'id': bailleur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('bailleur_new') }}">Create a new bailleur</a>
+        </li>
+    </ul>
+{% endblock %}

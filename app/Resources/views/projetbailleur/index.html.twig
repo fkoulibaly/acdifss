@@ -1,0 +1,41 @@
+{% extends '@Projet/app.html.twig' %}
+
+{% block body %}
+    <h1>Projetbailleurs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nompointfocal</th>
+                <th>Adressepointfocal</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for projetBailleur in projetBailleurs %}
+            <tr>
+                <td><a href="{{ path('projetbailleur_show', { 'id': projetBailleur.id }) }}">{{ projetBailleur.id }}</a></td>
+                <td>{{ projetBailleur.nomPointFocal }}</td>
+                <td>{{ projetBailleur.adressePointFocal }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('projetbailleur_show', { 'id': projetBailleur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('projetbailleur_edit', { 'id': projetBailleur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('projetbailleur_new') }}">Create a new projetBailleur</a>
+        </li>
+    </ul>
+{% endblock %}
