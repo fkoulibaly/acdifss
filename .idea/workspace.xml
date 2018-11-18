@@ -2,159 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa28c5ae-dfc5-4f8f-9e12-ece097af8c3c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/edit.content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/index.content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/msn.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/new.content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/show.content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/edit.content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/index.content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/msn.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/new.content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/show.content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/district/index.content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/district/msn.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/projet/index.content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/sb-admin-2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/sb-admin-2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/sb-admin-2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/sb-admin-2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot-tooltip/jquery.flot.tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot-tooltip/jquery.flot.tooltip.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot-tooltip/jquery.flot.tooltip.source.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/excanvas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/excanvas.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.colorhelpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.canvas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.categories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.crosshair.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.errorbars.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.fillbetween.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.navigate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.pie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.resize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.selection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.stack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.symbol.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.threshold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.flot.time.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/flot/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/css/font-awesome.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/extras.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/spinning.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_extras.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_spinning.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/font-awesome/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/leaflet/images/layers-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/leaflet/images/layers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/leaflet/images/marker-icon-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/leaflet/images/marker-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/leaflet/images/marker-shadow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/leaflet/leaflet-src.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/leaflet/leaflet-src.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/leaflet/leaflet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/leaflet/leaflet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/leaflet/leaflet.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/acdifss.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/acdifss.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/number.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/app.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/app.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/default/number.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BudgetBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BudgetBundle/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BudgetBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/BudgetBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BudgetBundle/Resources/views/app.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/BudgetBundle/Resources/views/app.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/AgenceFinancementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/AgenceFinancementController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/BailleurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/BailleurController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/DistrictController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/DistrictController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/InstitutionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/InstitutionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/InterventionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/InterventionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/ObjectifSpecifiqueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/ObjectifSpecifiqueController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/ProjetAgenceFinancementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/ProjetAgenceFinancementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/ProjetBailleurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/ProjetBailleurController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/ProjetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/ProjetController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/ProjetInstitutionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/ProjetInstitutionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/RegionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/RegionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Controller/ResultatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Controller/ResultatController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Entity/Bailleur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Entity/Bailleur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Entity/Institution.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Entity/Institution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Entity/ProjetBailleur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Entity/ProjetBailleur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/app.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/app.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/district/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/district/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/projet/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/projet/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/msn.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/msn.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -167,7 +23,47 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BailleurController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Controller/BailleurController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+              <folding>
+                <element signature="e#43#76#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="msn.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/msn.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
@@ -217,9 +113,7 @@
         <option value="$PROJECT_DIR$/src/ProjetBundle/Resources/views/projet/index.html.twig" />
         <option value="$PROJECT_DIR$/src/ProjetBundle/Controller/ProjetController.php" />
         <option value="$PROJECT_DIR$/src/ProjetBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/web/dist/css/sb-admin-2.css" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/BudgetBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
@@ -229,7 +123,6 @@
         <option value="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/msn.html.twig" />
         <option value="$PROJECT_DIR$/src/ProjetBundle/Controller/AgenceFinancementController.php" />
         <option value="$PROJECT_DIR$/src/ProjetBundle/Controller/DistrictController.php" />
-        <option value="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/msn.html.twig" />
         <option value="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/new.html.twig" />
         <option value="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/new.content.html.twig" />
         <option value="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/new.html.twig" />
@@ -241,7 +134,10 @@
         <option value="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/ProjetBundle/Resources/views/agencefinancement/edit.content.html.twig" />
         <option value="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/edit.html.twig" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/ProjetBundle/Controller/BailleurController.php" />
+        <option value="$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/msn.html.twig" />
       </list>
     </option>
   </component>
@@ -299,6 +195,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/templating" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -315,7 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -326,6 +223,11 @@
             <path>
               <item name="acdifss" type="b2602c69:ProjectViewProjectNode" />
               <item name="acdifss" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="acdifss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="acdifss" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -333,13 +235,6 @@
               <item name="acdifss" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ProjetBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="acdifss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acdifss" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ProjetBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="acdifss" type="b2602c69:ProjectViewProjectNode" />
@@ -355,15 +250,6 @@
               <item name="ProjetBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="acdifss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acdifss" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ProjetBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="agencefinancement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="acdifss" type="b2602c69:ProjectViewProjectNode" />
@@ -378,6 +264,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -388,17 +275,17 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\acdifss\app\Resources\views" />
-      <recent name="C:\xampp\htdocs\acdifss\src\ProjetBundle\Resources\views\agencefinancement" />
-      <recent name="C:\xampp\htdocs\acdifss\src\ProjetBundle\Resources\views" />
-      <recent name="C:\xampp\htdocs\acdifss\web" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\acdifss\src\ProjetBundle\Resources\views\bailleur" />
       <recent name="C:\xampp\htdocs\acdifss\src\ProjetBundle\Resources\views\agencefinancement" />
       <recent name="C:\xampp\htdocs\acdifss\src\ProjetBundle\Resources\views\projet" />
       <recent name="C:\xampp\htdocs\acdifss\src\ProjetBundle\Resources\views\district" />
+      <recent name="C:\xampp\htdocs\acdifss\web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\acdifss\app\Resources\views" />
+      <recent name="C:\xampp\htdocs\acdifss\src\ProjetBundle\Resources\views\agencefinancement" />
+      <recent name="C:\xampp\htdocs\acdifss\src\ProjetBundle\Resources\views" />
       <recent name="C:\xampp\htdocs\acdifss\web" />
     </key>
   </component>
@@ -529,11 +416,13 @@
       <workItem from="1541343526678" duration="1766000" />
       <workItem from="1541345343117" duration="1846000" />
       <workItem from="1541347250843" duration="627000" />
+      <workItem from="1542574895716" duration="1767000" />
+      <workItem from="1542576705482" duration="1820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153245000" />
+    <option name="totallyTimeSpent" value="156832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -613,13 +502,6 @@
     <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Entity/District.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Controller/RegionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -665,13 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
           <caret line="63" column="63" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -749,13 +624,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/index.content.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/msn.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
@@ -852,13 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Controller/BailleurController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="178" column="5" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/edit.content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -877,6 +738,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Controller/BailleurController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+          <folding>
+            <element signature="e#43#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Resources/views/bailleur/msn.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>

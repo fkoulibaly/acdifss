@@ -97,3 +97,14 @@ knp_paginator:
         # pagination: 'KnpPaginatorBundle:Pagination:sliding.html.twig'
         pagination: 'KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig'
         sortable: 'KnpPaginatorBundle:Pagination:sortable_link.html.twig'
+knp_snappy:
+    temporary_folder: "%kernel.cache_dir%/snappy"
+    process_timeout: 20 # In seconds
+    pdf:
+        enabled:    true
+        binary:     "\"C:\\Program Files (x86)\\wkhtmltox\\bin\\wkhtmltopdf.exe\"" # for Windows users
+        options:    []
+    image:
+        enabled:    true
+        binary:     "\"C:\\Program Files (x86)\\wkhtmltox\\bin\\wkhtmltoimage.exe\"" # for Windows users
+        options:    []

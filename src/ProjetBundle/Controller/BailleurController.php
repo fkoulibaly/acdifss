@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 
 /**
  * Bailleur controller.
@@ -45,15 +46,20 @@ class BailleurController extends Controller
         $bailleurs  = $this->get('knp_paginator')->paginate(
             $listeBailleurs,
             $request->query->get('page', 1)/*le numéro de la page à afficher*/,
-            6/*nbre d'éléments par page*/
+            12/*nbre d'éléments par page*/
         );
 
         $content = $this->renderView('@Projet/bailleur/msn.html.twig',
             array('bailleurs' => $bailleurs)
         );
-
+        /*
         return $this->render('@Projet/bailleur/index.html.twig',
             array('content' => $content)
+        );*/
+
+        return new PdfResponse(
+            $this->get('knp_snappy.pdf')->getOutputFromHtml($content),
+            'file.pdf'
         );
 
     }
