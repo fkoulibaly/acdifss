@@ -3,9 +3,12 @@
 namespace ProjetBundle\Controller;
 
 use ProjetBundle\Entity\AgenceFinancement;
+use ProjetBundle\ProjetBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * Agencefinancement controller.
@@ -20,15 +23,39 @@ class AgenceFinancementController extends Controller
      * @Route("/", name="agencefinancement_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction(Request $request=null)
     {
+        /*
         $em = $this->getDoctrine()->getManager();
 
         $agenceFinancements = $em->getRepository('ProjetBundle:AgenceFinancement')->findAll();
 
-        return $this->render('agencefinancement/index.html.twig', array(
-            'agenceFinancements' => $agenceFinancements,
-        ));
+       $content = $this->renderView('@Projet/agencefinancement/index.content.html.twig',
+           array('agenceFinancements' => $agenceFinancements)
+       );
+        return $this->render('@Projet/agencefinancement/index.html.twig',
+            array('content' => $content)
+            );
+
+        */
+
+        $em = $this->getDoctrine()->getManager();
+
+        $listeAgenceFinancements = $em->getRepository('ProjetBundle:AgenceFinancement')->findAll();
+
+        $AgenceFinancements  = $this->get('knp_paginator')->paginate(
+            $listeAgenceFinancements,
+            $request->query->get('page', 1)/*le numéro de la page à afficher*/,
+            6/*nbre d'éléments par page*/
+        );
+
+        $content = $this->renderView('@Projet/agencefinancement/msn.html.twig',
+            array('agencefinancements' => $AgenceFinancements)
+        );
+
+        return $this->render('@Projet/agencefinancement/index.html.twig',
+            array('content' => $content)
+        );
     }
 
     /**
@@ -51,10 +78,12 @@ class AgenceFinancementController extends Controller
             return $this->redirectToRoute('agencefinancement_show', array('id' => $agenceFinancement->getId()));
         }
 
-        return $this->render('agencefinancement/new.html.twig', array(
-            'agenceFinancement' => $agenceFinancement,
-            'form' => $form->createView(),
-        ));
+        $content = $this->renderView('@Projet/agencefinancement/new.content.html.twig',
+            array('agenceFinancement' => $agenceFinancement, 'form' => $form->createView())
+        );
+
+        return $this->render('@Projet/agencefinancement/index.html.twig',
+            array('content' => $content));
     }
 
     /**
@@ -66,11 +95,19 @@ class AgenceFinancementController extends Controller
     public function showAction(AgenceFinancement $agenceFinancement)
     {
         $deleteForm = $this->createDeleteForm($agenceFinancement);
-
-        return $this->render('agencefinancement/show.html.twig', array(
+/*
+        return $this->render('@Projet/agencefinancement/show.html.twig', array(
             'agenceFinancement' => $agenceFinancement,
             'delete_form' => $deleteForm->createView(),
         ));
+        */
+
+        $content = $this->renderView('@Projet/agencefinancement/show.content.html.twig',
+            array('agenceFinancement' => $agenceFinancement, 'delete_form' => $deleteForm->createView())
+        );
+
+        return $this->render('@Projet/agencefinancement/index.html.twig',
+            array('content' => $content));
     }
 
     /**
@@ -90,30 +127,46 @@ class AgenceFinancementController extends Controller
 
             return $this->redirectToRoute('agencefinancement_edit', array('id' => $agenceFinancement->getId()));
         }
-
-        return $this->render('agencefinancement/edit.html.twig', array(
+/*
+        return $this->render('@Projet/agencefinancement/edit.html.twig', array(
             'agenceFinancement' => $agenceFinancement,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
+*/
+
+        $content = $this->renderView('@Projet/agencefinancement/edit.content.html.twig',
+            array('agenceFinancement' => $agenceFinancement,
+                'edit_form' => $editForm->createView(),
+                'delete_form' => $deleteForm->createView(),
+                )
+        );
+
+        return $this->render('@Projet/agencefinancement/index.html.twig',
+            array('content' => $content));
+
     }
 
     /**
      * Deletes a agenceFinancement entity.
      *
-     * @Route("/{id}", name="agencefinancement_delete")
-     * @Method("DELETE")
+     * @Route("/delete/{id}", name="agencefinancement_delete")
+     * @Method({"POST"})
      */
-    public function deleteAction(Request $request, AgenceFinancement $agenceFinancement)
+    public function deleteAction($id)
     {
-        $form = $this->createDeleteForm($agenceFinancement);
-        $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($agenceFinancement);
-            $em->flush();
+        $em = $this->getDoctrine()->getManager();
+
+        $agence = $em->getRepository('ProjetBundle:AgenceFinancement')->find($id);
+
+        if(! $agence){
+            throw  new NotFoundHttpException(" Agence ".$id." n'existe pas ");
         }
+
+        $em->remove($agence);
+
+        $em->flush();
 
         return $this->redirectToRoute('agencefinancement_index');
     }

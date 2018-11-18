@@ -26,7 +26,7 @@ class ProjetBailleurController extends Controller
 
         $projetBailleurs = $em->getRepository('ProjetBundle:ProjetBailleur')->findAll();
 
-        return $this->render('projetbailleur/index.html.twig', array(
+        return $this->render('@Projet/projetbailleur/index.html.twig', array(
             'projetBailleurs' => $projetBailleurs,
         ));
     }
@@ -51,7 +51,7 @@ class ProjetBailleurController extends Controller
             return $this->redirectToRoute('projetbailleur_show', array('id' => $projetBailleur->getId()));
         }
 
-        return $this->render('projetbailleur/new.html.twig', array(
+        return $this->render('@Projet/projetbailleur/new.html.twig', array(
             'projetBailleur' => $projetBailleur,
             'form' => $form->createView(),
         ));
@@ -67,7 +67,7 @@ class ProjetBailleurController extends Controller
     {
         $deleteForm = $this->createDeleteForm($projetBailleur);
 
-        return $this->render('projetbailleur/show.html.twig', array(
+        return $this->render('@Projet/projetbailleur/show.html.twig', array(
             'projetBailleur' => $projetBailleur,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -91,7 +91,7 @@ class ProjetBailleurController extends Controller
             return $this->redirectToRoute('projetbailleur_edit', array('id' => $projetBailleur->getId()));
         }
 
-        return $this->render('projetbailleur/edit.html.twig', array(
+        return $this->render('@Projet/projetbailleur/edit.html.twig', array(
             'projetBailleur' => $projetBailleur,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

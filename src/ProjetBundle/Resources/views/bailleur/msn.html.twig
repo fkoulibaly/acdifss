@@ -1,0 +1,26 @@
+<h1>Les bailleurs</h1>
+<p>  <a href="{{ path('bailleur_new') }}">Create a new bailleur</a> </p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for bailleur in bailleurs %}
+        <tr>
+            <td>{{ bailleur.id }}</td>
+            <td>{{ bailleur.nom }}</td>
+            <td>{{ bailleur.sigle }}</td>
+            <td>
+                [<a href="{{ path('bailleur_edit', { 'id': bailleur.id }) }}">edit</a> |
+                <a href="{{ path('bailleur_show', { 'id': bailleur.id }) }}">show</a> |
+                <a href="{{ path('bailleur_delete', { 'id': bailleur.id }) }}">delete</a> ]
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div class="text-center">{{ knp_pagination_render(bailleurs) }}</div>

@@ -26,7 +26,7 @@ class ObjectifSpecifiqueController extends Controller
 
         $objectifSpecifiques = $em->getRepository('ProjetBundle:ObjectifSpecifique')->findAll();
 
-        return $this->render('objectifspecifique/index.html.twig', array(
+        return $this->render('@Projet/objectifspecifique/index.html.twig', array(
             'objectifSpecifiques' => $objectifSpecifiques,
         ));
     }
@@ -51,7 +51,7 @@ class ObjectifSpecifiqueController extends Controller
             return $this->redirectToRoute('objectifspecifique_show', array('id' => $objectifSpecifique->getId()));
         }
 
-        return $this->render('objectifspecifique/new.html.twig', array(
+        return $this->render('@Projet/objectifspecifique/new.html.twig', array(
             'objectifSpecifique' => $objectifSpecifique,
             'form' => $form->createView(),
         ));
@@ -67,7 +67,7 @@ class ObjectifSpecifiqueController extends Controller
     {
         $deleteForm = $this->createDeleteForm($objectifSpecifique);
 
-        return $this->render('objectifspecifique/show.html.twig', array(
+        return $this->render('@Projet/objectifspecifique/show.html.twig', array(
             'objectifSpecifique' => $objectifSpecifique,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -91,7 +91,7 @@ class ObjectifSpecifiqueController extends Controller
             return $this->redirectToRoute('objectifspecifique_edit', array('id' => $objectifSpecifique->getId()));
         }
 
-        return $this->render('objectifspecifique/edit.html.twig', array(
+        return $this->render('@Projet/objectifspecifique/edit.html.twig', array(
             'objectifSpecifique' => $objectifSpecifique,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

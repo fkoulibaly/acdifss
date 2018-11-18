@@ -1,0 +1,27 @@
+<h1>Les Agences de Financement</h1>
+<p>  <a href="{{ path('agencefinancement_new') }}">Create a new AgenceFinancement</a> </p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Sigle</th>
+        <th>Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for agencefinancement in agencefinancements %}
+        <tr>
+            <td>{{ agencefinancement.id }}</td>
+            <td>{{ agencefinancement.nom }}</td>
+            <td>{{ agencefinancement.sigle }}</td>
+            <td>
+                [<a href="{{ path('agencefinancement_edit', { 'id': agencefinancement.id }) }}">edit</a> |
+                <a href="{{ path('agencefinancement_show', { 'id': agencefinancement.id }) }}">show</a> |
+                <a href="{{ path('agencefinancement_delete', { 'id': agencefinancement.id }) }}">delete</a> ]
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div class="text-center">{{ knp_pagination_render(agencefinancements) }}</div>

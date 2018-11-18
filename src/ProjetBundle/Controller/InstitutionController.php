@@ -26,7 +26,7 @@ class InstitutionController extends Controller
 
         $institutions = $em->getRepository('ProjetBundle:Institution')->findAll();
 
-        return $this->render('institution/index.html.twig', array(
+        return $this->render('@Projet/institution/index.html.twig', array(
             'institutions' => $institutions,
         ));
     }
@@ -51,7 +51,7 @@ class InstitutionController extends Controller
             return $this->redirectToRoute('institution_show', array('id' => $institution->getId()));
         }
 
-        return $this->render('institution/new.html.twig', array(
+        return $this->render('@Projet/institution/new.html.twig', array(
             'institution' => $institution,
             'form' => $form->createView(),
         ));
@@ -67,7 +67,7 @@ class InstitutionController extends Controller
     {
         $deleteForm = $this->createDeleteForm($institution);
 
-        return $this->render('institution/show.html.twig', array(
+        return $this->render('@Projet/institution/show.html.twig', array(
             'institution' => $institution,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -91,7 +91,7 @@ class InstitutionController extends Controller
             return $this->redirectToRoute('institution_edit', array('id' => $institution->getId()));
         }
 
-        return $this->render('institution/edit.html.twig', array(
+        return $this->render('@Projet/institution/edit.html.twig', array(
             'institution' => $institution,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

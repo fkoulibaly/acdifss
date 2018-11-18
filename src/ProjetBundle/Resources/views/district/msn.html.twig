@@ -1,0 +1,25 @@
+<h1>Les districts</h1>
+<p>  <a href="{{ path('district_new') }}">Create a new district</a> </p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for district in districts %}
+        <tr>
+            <td>{{ district.id }}</td>
+            <td>{{ district.nom }}</td>
+            <td>
+                [<a href="{{ path('district_edit', { 'id': district.id }) }}">edit</a> |
+                <a href="{{ path('district_show', { 'id': district.id }) }}">show</a> |
+                <a href="{{ path('district_delete', { 'id': district.id }) }}">delete</a> ]
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div class="text-center">{{ knp_pagination_render(districts) }}</div>

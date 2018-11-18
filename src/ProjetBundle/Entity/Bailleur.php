@@ -93,4 +93,10 @@ class Bailleur
     {
         return $this->sigle;
     }
+
+    public  function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->getId().'-'.$this->getSigle();
+    }
 }

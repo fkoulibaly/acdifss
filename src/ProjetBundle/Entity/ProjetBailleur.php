@@ -154,4 +154,10 @@ class ProjetBailleur
     {
         return $this->projet;
     }
+
+    public  function  __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->getId().'-'.$this->getBailleur()->getNom().'-'.$this->getProjet()->getTitre();
+    }
 }

@@ -6,6 +6,7 @@ use ProjetBundle\Entity\Bailleur;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 // use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -22,15 +23,39 @@ class BailleurController extends Controller
      * @Route("/", name="bailleur_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+        /*
         $em = $this->getDoctrine()->getManager();
 
         $bailleurs = $em->getRepository('ProjetBundle:Bailleur')->findAll();
 
-        return $this->render('@Projet/bailleur/index.html.twig', array(
-            'bailleurs' => $bailleurs,
-        ));
+       $content = $this->renderView('@Projet/bailleur/index.content.html.twig',
+            array('bailleurs' => $bailleurs)
+        );
+        return $this->render('@Projet/bailleur/index.html.twig'
+             , array('content' => $content)
+        );
+        */
+
+        $em = $this->getDoctrine()->getManager();
+
+        $listeBailleurs = $em->getRepository('ProjetBundle:Bailleur')->findAll();
+
+        $bailleurs  = $this->get('knp_paginator')->paginate(
+            $listeBailleurs,
+            $request->query->get('page', 1)/*le numéro de la page à afficher*/,
+            6/*nbre d'éléments par page*/
+        );
+
+        $content = $this->renderView('@Projet/bailleur/msn.html.twig',
+            array('bailleurs' => $bailleurs)
+        );
+
+        return $this->render('@Projet/bailleur/index.html.twig',
+            array('content' => $content)
+        );
+
     }
 
     /**
@@ -52,11 +77,20 @@ class BailleurController extends Controller
 
             return $this->redirectToRoute('bailleur_show', array('id' => $bailleur->getId()));
         }
-
+        /*
         return $this->render('@Projet/bailleur/new.html.twig', array(
             'bailleur' => $bailleur,
             'form' => $form->createView(),
         ));
+
+        */
+
+        $content = $this->renderView('@Projet/bailleur/new.content.html.twig',
+            array('bailleur' => $bailleur, 'form' => $form->createView())
+        );
+
+        return $this->render('@Projet/bailleur/index.html.twig',
+            array('content' => $content));
     }
 
     /**
@@ -69,10 +103,19 @@ class BailleurController extends Controller
     {
         $deleteForm = $this->createDeleteForm($bailleur);
 
+        /*
         return $this->render('@Projet/bailleur/show.html.twig', array(
             'bailleur' => $bailleur,
             'delete_form' => $deleteForm->createView(),
         ));
+        */
+
+        $content = $this->renderView('@Projet/bailleur/show.content.html.twig',
+            array('bailleur' => $bailleur, 'delete_form' => $deleteForm->createView())
+        );
+
+        return $this->render('@Projet/bailleur/index.html.twig',
+            array('content' => $content));
     }
 
     /**
@@ -92,32 +135,47 @@ class BailleurController extends Controller
 
             return $this->redirectToRoute('bailleur_edit', array('id' => $bailleur->getId()));
         }
-
+        /*
         return $this->render('@Projet/bailleur/edit.html.twig', array(
             'bailleur' => $bailleur,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
+        */
+
+        $content = $this->renderView('@Projet/bailleur/edit.content.html.twig',
+            array('bailleur' => $bailleur,
+                'edit_form' => $editForm->createView(),
+                'delete_form' => $deleteForm->createView(),
+            )
+        );
+
+        return $this->render('@Projet/bailleur/index.html.twig',
+            array('content' => $content));
     }
 
     /**
      * Deletes a bailleur entity.
      *
-     * @Route("/{id}", name="bailleur_delete")
-     * @Method("DELETE")
+     * @Route("/delete/{id}", name="bailleur_delete")
+     * @Method("POST")
      */
-    public function deleteAction(Request $request, Bailleur $bailleur)
+    public function deleteAction($id)
     {
-        $form = $this->createDeleteForm($bailleur);
-        $form->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
 
-       if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($bailleur);
-            $em->flush();
+        $bailleur = $em->getRepository('ProjetBundle:Bailleur')->find($id);
+
+        if(! $bailleur){
+            throw  new NotFoundHttpException(" Bailleur ".$id." n'existe pas ");
         }
 
+        $em->remove($bailleur);
+
+        $em->flush();
+
         return $this->redirectToRoute('bailleur_index');
+
     }
 
     /**

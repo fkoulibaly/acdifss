@@ -1,8 +1,14 @@
-{# app/Reources/views/default/number.html.twig #}
+{# app/Resources/views/default/number.html.twig #}
 {% extends '@App/app.html.twig' %}
 
 {% block body %}
-
-    <h1> Hello World !</h1>
-
+    {{ parent() }}
 {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block title %} {{ parent() }} - Projet {% endblock %}
+
+{% block javascripts %} {{ parent() }}  {% endblock %}

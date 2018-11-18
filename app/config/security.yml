@@ -1,20 +1,20 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
-security:
+#1 security:
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
-    providers:
-        in_memory:
-            memory: ~
+#2    providers:
+#3        in_memory:
+#4            memory: ~
 
-    firewalls:
+#5    firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
+#6        dev:
+#7            pattern: ^/(_(profiler|wdt)|css|images|js)/
+#8            security: false
 
-        main:
-            anonymous: ~
+#9        main:
+#10            anonymous: ~
             # activate different ways to authenticate
 
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
@@ -22,3 +22,49 @@ security:
 
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            pattern: ^/
+            user_checker: security.user_checker
+            form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+
+            anonymous:    true
+            logout:       true
+
+    access_control:
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/agencefinancement/, role: ROLE_USER }
+        - { path: ^/bailleur/, role: ROLE_USER }
+        - { path: ^/district/, role: ROLE_USER }
+        - { path: ^/institution/, role: ROLE_USER }
+        - { path: ^/intervention/, role: ROLE_USER }
+        - { path: ^/objectifspecifique/, role: ROLE_USER }
+        - { path: ^/projetagencefinancement/, role: ROLE_USER }
+        - { path: ^/projetbailleur/, role: ROLE_USER }
+        - { path: ^/projet/, role: ROLE_USER }
+        - { path: ^/projetinstitution/, role: ROLE_USER }
+        - { path: ^/region/, role: ROLE_USER }
+        - { path: ^/resultat/, role: ROLE_USER }
+        - { path: ^/district/msn, role: ROLE_USER }
+        - { path: ^/, role: ROLE_USER }
+

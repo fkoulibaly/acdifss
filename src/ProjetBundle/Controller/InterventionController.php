@@ -26,7 +26,7 @@ class InterventionController extends Controller
 
         $interventions = $em->getRepository('ProjetBundle:Intervention')->findAll();
 
-        return $this->render('intervention/index.html.twig', array(
+        return $this->render('@Projet/intervention/index.html.twig', array(
             'interventions' => $interventions,
         ));
     }
@@ -51,7 +51,7 @@ class InterventionController extends Controller
             return $this->redirectToRoute('intervention_show', array('id' => $intervention->getId()));
         }
 
-        return $this->render('intervention/new.html.twig', array(
+        return $this->render('@Projet/intervention/new.html.twig', array(
             'intervention' => $intervention,
             'form' => $form->createView(),
         ));
@@ -67,7 +67,7 @@ class InterventionController extends Controller
     {
         $deleteForm = $this->createDeleteForm($intervention);
 
-        return $this->render('intervention/show.html.twig', array(
+        return $this->render('@Projet/intervention/show.html.twig', array(
             'intervention' => $intervention,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -91,7 +91,7 @@ class InterventionController extends Controller
             return $this->redirectToRoute('intervention_edit', array('id' => $intervention->getId()));
         }
 
-        return $this->render('intervention/edit.html.twig', array(
+        return $this->render('@Projet/intervention/edit.html.twig', array(
             'intervention' => $intervention,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

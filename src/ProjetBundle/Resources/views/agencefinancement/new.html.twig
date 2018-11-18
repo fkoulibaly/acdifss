@@ -1,16 +1,13 @@
 {% extends '@Projet/app.html.twig' %}
 
 {% block body %}
-    <h1>Agencefinancement creation</h1>
-
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('agencefinancement_index') }}">Back to the list</a>
-        </li>
-    </ul>
+    {{ parent() }}
 {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block title %} {{ parent() }} - Projet {% endblock %}
+
+{% block javascripts %} {{ parent() }}  {% endblock %}

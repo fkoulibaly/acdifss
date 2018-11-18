@@ -26,7 +26,7 @@ class ResultatController extends Controller
 
         $resultats = $em->getRepository('ProjetBundle:Resultat')->findAll();
 
-        return $this->render('resultat/index.html.twig', array(
+        return $this->render('@Projet/resultat/index.html.twig', array(
             'resultats' => $resultats,
         ));
     }
@@ -51,7 +51,7 @@ class ResultatController extends Controller
             return $this->redirectToRoute('resultat_show', array('id' => $resultat->getId()));
         }
 
-        return $this->render('resultat/new.html.twig', array(
+        return $this->render('@Projet/resultat/new.html.twig', array(
             'resultat' => $resultat,
             'form' => $form->createView(),
         ));
@@ -67,7 +67,7 @@ class ResultatController extends Controller
     {
         $deleteForm = $this->createDeleteForm($resultat);
 
-        return $this->render('resultat/show.html.twig', array(
+        return $this->render('@Projet/resultat/show.html.twig', array(
             'resultat' => $resultat,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -91,7 +91,7 @@ class ResultatController extends Controller
             return $this->redirectToRoute('resultat_edit', array('id' => $resultat->getId()));
         }
 
-        return $this->render('resultat/edit.html.twig', array(
+        return $this->render('@Projet/resultat/edit.html.twig', array(
             'resultat' => $resultat,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

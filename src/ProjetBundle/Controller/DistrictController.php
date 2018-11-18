@@ -20,15 +20,38 @@ class DistrictController extends Controller
      * @Route("/", name="district_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+        /*
         $em = $this->getDoctrine()->getManager();
 
         $districts = $em->getRepository('ProjetBundle:District')->findAll();
 
-        return $this->render('district/index.html.twig', array(
-            'districts' => $districts,
-        ));
+        $content = $this->renderView('@Projet/district/index.content.html.twig',
+            array('districts' => $districts)
+        );
+        return $this->render('@Projet/district/index.html.twig',
+            array('content' => $content)
+        );
+        */
+
+        $em = $this->getDoctrine()->getManager();
+
+        $listeDistricts = $em->getRepository('ProjetBundle:District')->findAll();
+
+        $districts  = $this->get('knp_paginator')->paginate(
+            $listeDistricts,
+            $request->query->get('page', 1)/*le numéro de la page à afficher*/,
+            6/*nbre d'éléments par page*/
+        );
+
+        $content = $this->renderView('@Projet/district/msn.html.twig',
+            array('districts' => $districts)
+        );
+
+        return $this->render('@Projet/district/index.html.twig',
+            array('content' => $content)
+        );
     }
 
     /**
@@ -51,7 +74,7 @@ class DistrictController extends Controller
             return $this->redirectToRoute('district_show', array('id' => $district->getId()));
         }
 
-        return $this->render('district/new.html.twig', array(
+        return $this->render('@Projet/district/new.html.twig', array(
             'district' => $district,
             'form' => $form->createView(),
         ));
@@ -67,7 +90,7 @@ class DistrictController extends Controller
     {
         $deleteForm = $this->createDeleteForm($district);
 
-        return $this->render('district/show.html.twig', array(
+        return $this->render('@Projet/district/show.html.twig', array(
             'district' => $district,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -91,7 +114,7 @@ class DistrictController extends Controller
             return $this->redirectToRoute('district_edit', array('id' => $district->getId()));
         }
 
-        return $this->render('district/edit.html.twig', array(
+        return $this->render('@Projet/district/edit.html.twig', array(
             'district' => $district,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -101,11 +124,12 @@ class DistrictController extends Controller
     /**
      * Deletes a district entity.
      *
-     * @Route("/{id}", name="district_delete")
-     * @Method("DELETE")
+     * @Route("/delete/{id}", name="district_delete")
+     * @Method("POST")
      */
-    public function deleteAction(Request $request, District $district)
+    public function deleteAction($id)
     {
+        /*
         $form = $this->createDeleteForm($district);
         $form->handleRequest($request);
 
@@ -114,6 +138,18 @@ class DistrictController extends Controller
             $em->remove($district);
             $em->flush();
         }
+        */
+        $em = $this->getDoctrine()->getManager();
+
+        $district = $em->getRepository('ProjetBundle:District')->find($id);
+
+        if(! $district){
+            throw  new NotFoundHttpException(" District ".$id." n'existe pas ");
+        }
+
+        $em->remove($district);
+
+        $em->flush();
 
         return $this->redirectToRoute('district_index');
     }

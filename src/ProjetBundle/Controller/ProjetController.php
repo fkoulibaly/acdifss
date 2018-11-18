@@ -5,7 +5,8 @@ namespace ProjetBundle\Controller;
 use ProjetBundle\Entity\Projet;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Projet controller.
@@ -17,7 +18,7 @@ class ProjetController extends Controller
     /**
      * Lists all projet entities.
      *
-     * @Route("/", name="projet_index")
+     * @Route("/projet", name="projet_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -26,9 +27,13 @@ class ProjetController extends Controller
 
         $projets = $em->getRepository('ProjetBundle:Projet')->findAll();
 
-        return $this->render('projet/index.html.twig', array(
-            'projets' => $projets,
-        ));
+        $content = $this->renderView('@Projet/projet/index.content.html.twig',
+            array('projets' => $projets)
+        );
+
+        return $this->render('@Projet/projet/index.html.twig'
+            , array('content' => $content)
+        );
     }
 
     /**
@@ -51,7 +56,7 @@ class ProjetController extends Controller
             return $this->redirectToRoute('projet_show', array('id' => $projet->getId()));
         }
 
-        return $this->render('projet/new.html.twig', array(
+        return $this->render('@Projet/projet//new.html.twig', array(
             'projet' => $projet,
             'form' => $form->createView(),
         ));
@@ -67,7 +72,7 @@ class ProjetController extends Controller
     {
         $deleteForm = $this->createDeleteForm($projet);
 
-        return $this->render('projet/show.html.twig', array(
+        return $this->render('@Projet/projet//show.html.twig', array(
             'projet' => $projet,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -91,7 +96,7 @@ class ProjetController extends Controller
             return $this->redirectToRoute('projet_edit', array('id' => $projet->getId()));
         }
 
-        return $this->render('projet/edit.html.twig', array(
+        return $this->render('@Projet/projet//edit.html.twig', array(
             'projet' => $projet,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

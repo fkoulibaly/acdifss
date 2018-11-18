@@ -1,36 +1,13 @@
 {% extends '@Projet/app.html.twig' %}
 
 {% block body %}
-    <h1>Agencefinancement</h1>
-
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ agenceFinancement.id }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>{{ agenceFinancement.nom }}</td>
-            </tr>
-            <tr>
-                <th>Sigle</th>
-                <td>{{ agenceFinancement.sigle }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('agencefinancement_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('agencefinancement_edit', { 'id': agenceFinancement.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    {{ parent() }}
 {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block title %} {{ parent() }} - Projet {% endblock %}
+
+{% block javascripts %} {{ parent() }}  {% endblock %}

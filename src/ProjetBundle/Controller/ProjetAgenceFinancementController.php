@@ -26,7 +26,7 @@ class ProjetAgenceFinancementController extends Controller
 
         $projetAgenceFinancements = $em->getRepository('ProjetBundle:ProjetAgenceFinancement')->findAll();
 
-        return $this->render('projetagencefinancement/index.html.twig', array(
+        return $this->render('@Projet/projetagencefinancement/index.html.twig', array(
             'projetAgenceFinancements' => $projetAgenceFinancements,
         ));
     }
@@ -51,7 +51,7 @@ class ProjetAgenceFinancementController extends Controller
             return $this->redirectToRoute('projetagencefinancement_show', array('id' => $projetAgenceFinancement->getId()));
         }
 
-        return $this->render('projetagencefinancement/new.html.twig', array(
+        return $this->render('@Projet/projetagencefinancement/new.html.twig', array(
             'projetAgenceFinancement' => $projetAgenceFinancement,
             'form' => $form->createView(),
         ));
@@ -67,7 +67,7 @@ class ProjetAgenceFinancementController extends Controller
     {
         $deleteForm = $this->createDeleteForm($projetAgenceFinancement);
 
-        return $this->render('projetagencefinancement/show.html.twig', array(
+        return $this->render('@Projet/projetagencefinancement/show.html.twig', array(
             'projetAgenceFinancement' => $projetAgenceFinancement,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -91,7 +91,7 @@ class ProjetAgenceFinancementController extends Controller
             return $this->redirectToRoute('projetagencefinancement_edit', array('id' => $projetAgenceFinancement->getId()));
         }
 
-        return $this->render('projetagencefinancement/edit.html.twig', array(
+        return $this->render('@Projet/projetagencefinancement/edit.html.twig', array(
             'projetAgenceFinancement' => $projetAgenceFinancement,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

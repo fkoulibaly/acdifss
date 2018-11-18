@@ -5,13 +5,22 @@ namespace ProjetBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Default controller.
+ *
+ * @Route("projet")
+ */
 class DefaultController extends Controller
 {
     /**
-     * @Route("/projet")
+     * @Route("/", name="homepage_projet")
      */
     public function indexAction()
     {
-        return $this->render('@Projet/Default/index.html.twig');
+        $content = $this->renderView('content.html.twig');
+
+        return $this->render('@Projet/Default/index.html.twig'
+            , array('content' => $content)
+        );
     }
 }

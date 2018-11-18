@@ -1,0 +1,32 @@
+<h1>Bailleur</h1>
+
+<table>
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ bailleur.id }}</td>
+        </tr>
+        <tr>
+            <th>Nom</th>
+            <td>{{ bailleur.nom }}</td>
+        </tr>
+        <tr>
+            <th>Sigle</th>
+            <td>{{ bailleur.sigle }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('bailleur_index') }}">Back to the list</a>
+    </li>
+    <li>
+        <a href="{{ path('bailleur_edit', { 'id': bailleur.id }) }}">Edit</a>
+    </li>
+    <li>
+        {{ form_start(delete_form) }}
+            <input type="submit" value="Delete">
+        {{ form_end(delete_form) }}
+    </li>
+</ul>
